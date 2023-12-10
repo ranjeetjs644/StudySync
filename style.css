@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    height: 100%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.left {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mid {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 2rem;
+    margin: 5px;
+
+}
+
+.logo-text {
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    color: rgb(44, 43, 43);
+
+}
+
+.mid ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.mid ul li {
+    margin: .7rem;
+
+}
+
+.mid ul li a {
+    font-size: .95rem;
+    text-decoration: none;
+    color: rgb(95, 92, 92);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+
+}
+
+.mid ul li:hover,
+.mid ul li a:hover {
+    color: black;
+    font-weight: 800;
+    transform: scale(1.1);
+
+}
+
+.right button {
+    padding: .6rem .9rem .6rem .9rem;
+    font-size: .8rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(52, 29, 180, 0.856);
+}
+
+.right button:hover {
+    transform: scale(1.05);
+    background-color: rgb(52, 29, 180);
+
+}
+
+.home {
+    width: 100vw;
+    height: 90vh;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+
+.home .left,
+.home .right {
+    width: 45%;
+    height: 90%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content:right;
+}
+.home .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .left .content,.home .right .image {
+    /* border: 2px solid rgb(43, 41, 41); */
+    width: 70%;
+    height: 85%;
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+    justify-content: space-between;
+    
+
+}
+
+.home .left .content div:nth-child(1) {
+    font-weight: 800;
+    color: rgba(120, 81, 230, 0.9);
+    font-size: .9rem;
+    margin: .5rem 0;
+    animation: smoothRefresh .9s ease-in-out;
+
+
+}
+
+.home .left .content div:nth-child(2) {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: rgb(22, 22, 22);
+    margin: 1.4rem 0;
+    animation: smoothRefresh .8s ease-in-out;
+
+}
+
+.home .left .content div:nth-child(3) {
+    margin-top: 1.3rem;
+    font-size: .9rem;
+    color: rgb(95, 92, 92);
+    word-spacing: 5px;
+    line-height: 1.rem;
+    margin: 1rem 0;
+    animation: smoothRefresh .7s ease-in-out;
+    text-align: justify;
+
+
+}
+
+
+.home .left .content div:nth-child(4) {
+    padding: 1rem 0;
+    animation: smoothRefresh .6s ease-in-out;
+    
+}
+
+.home .left .content div:nth-child(4) button {
+    border: none;
+    background-color: rgb(70, 66, 66);
+    color: #fff;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.home .left .content div:nth-child(4) button:nth-child(1) {
+    background-color: rgba(52, 29, 180, 0.856);
+    font-size: .8rem;
+    margin-right: .5rem;
+    transition: all ease-in-out .2s;
+}
+button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.home .right .image img{
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+    transition: all ease-in-out .2s;
+    animation: smoothRefreshImg .8s ease-in-out;
+}
+
+.home .right .image img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* .content {
+    animation: smoothRefresh 1s ease-in-out;
+} */
+
+@keyframes smoothRefreshImg {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes smoothRefresh {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
